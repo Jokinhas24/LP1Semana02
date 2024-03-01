@@ -50,6 +50,9 @@ namespace ValoresEspeciais
             //float
             Console.WriteLine(2 * float.MaxValue);
             Console.WriteLine(float.MaxValue + 1);
+            //Underflow
+            Console.WriteLine(2 * float.MinValue);
+            Console.WriteLine(float.MinValue - 1);
 
         }
     }
