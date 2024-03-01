@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 
 namespace BreakContinue
 {
@@ -19,7 +20,7 @@ namespace BreakContinue
                 }
 
                 // Skips current cycle if current turn is divisible by 3
-                if (turn % 3 == 0)
+                if (turn % 3 == 0 || turn == 10)
                 {
                     continue;
                 }
