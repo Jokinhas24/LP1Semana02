@@ -40,6 +40,15 @@ namespace ValoresEspeciais
 
             //NaN
             Console.WriteLine(double.NaN);
+
+            //UI purposes + next exercise
+            Console.WriteLine("");
+
+            //Overflow
+            uint ui = uint.MaxValue
+            Console.WriteLine(ui + 1);
+
+
         }
     }
 }
