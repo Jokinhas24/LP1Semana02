@@ -14,11 +14,17 @@ namespace Cilindro
             string r = Console.ReadLine();
             float radius = float.Parse(r);
 
-            //PI R ^2 A
+            //UI purposes
+            Console.WriteLine("");
 
-            Console.WriteLine(MathF.PI * MathF.Low(r, 2) * h);
+            //PI R ^2 A
+            float V = MathF.PI * MathF.Pow(radius, 2) * height;
+            Console.WriteLine($"The Volume of the Cylinder is: {V}");
 
             //2 PI R
+
+            float Sa = 2 * MathF.PI * radius;
+            Console.WriteLine($"And the Area of the Base is: {Sa}");
         }
     }
 }
