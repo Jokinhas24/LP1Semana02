@@ -30,6 +30,16 @@ namespace ValoresEspeciais
             //ulong
             Console.WriteLine(ulong.MinValue);
             Console.WriteLine(ulong.MaxValue);
+
+            //UI purposes
+            Console.WriteLine("");
+
+            //+infinity and -infinity
+            Console.WriteLine(float.NegativeInfinity);
+            Console.WriteLine(float.PositiveInfinity);
+
+            //NaN
+            Console.WriteLine(double.NaN);
         }
     }
 }
