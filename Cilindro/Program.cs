@@ -15,9 +15,8 @@ namespace Cilindro
             double v = Math.PI * Math.Pow(r, 2) * a;
             double s = 2 * Math.PI * r * (r + a);
 
-            Console.WriteLine("Volume of the cylinder is:", v.ToString());
-            Console.WriteLine("Area of the cylinder is:", s.ToString());
-
+            Console.WriteLine("Volume of the cylinder is: " + v.ToString("F3"));
+            Console.WriteLine("Area of the cylinder is: " + s.ToString("F3"));
         }
     }
 }
