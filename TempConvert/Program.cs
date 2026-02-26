@@ -13,10 +13,10 @@ namespace TempConvert
         {
             CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
 
-            Console.Write("Insert a temperature: ");
+            Console.Write("Temperature: ");
             float t = float.Parse(Console.ReadLine());
 
-            Console.Write("and it's unit, 'C' (for Celsius) or F (for Fahrenheit): ");
+            Console.Write("Unit (C/F): ");
             string og = Console.ReadLine();
 
             switch (og)
