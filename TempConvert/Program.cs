@@ -20,11 +20,14 @@ namespace TempConvert
             {
                 case "F":
                 double tf = t * 1.8 + 32;
-                Console.WriteLine("You temperature in the other origin is: " + tf.ToString("F3"));
+                Console.WriteLine("You temperature in the other unit is: " + tf.ToString("F3"));
                     break;
                 case "C":
                 double tc = (t - 32)/1.8;
-                Console.WriteLine("You temperature in the other origin is: " + tc.ToString("F3"));
+                Console.WriteLine("You temperature in the other unit is: " + tc.ToString("F3"));
+                    break;
+                default:
+                Console.WriteLine("Invalid unit");
                     break;
             }
         }
