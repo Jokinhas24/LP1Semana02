@@ -3,6 +3,7 @@ using System.Data;
 using System.Net;
 using System.Net.Sockets;
 using System.Security.Cryptography;
+using System.Globalization;
 
 namespace TempConvert
 {
@@ -10,24 +11,30 @@ namespace TempConvert
     {
         private static void Main(string[] args)
         {
-            Console.WriteLine("Insert a temperature:");
+            CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
+
+            Console.Write("Insert a temperature: ");
             float t = float.Parse(Console.ReadLine());
 
-            Console.WriteLine("and is it 'C' (for Celsius) or F (for Fahrenheit)");
+            Console.Write("and it's unit, 'C' (for Celsius) or F (for Fahrenheit): ");
             string og = Console.ReadLine();
 
             switch (og)
             {
-                case "F":
-                double tf = t * 1.8 + 32;
-                Console.WriteLine("You temperature in the other unit is: " + tf.ToString("F3"));
-                    break;
                 case "C":
-                double tc = (t - 32)/1.8;
-                Console.WriteLine("You temperature in the other unit is: " + tc.ToString("F3"));
+                    double tc = (t * 1.8) + 32;
+                    Console.WriteLine(t.ToString("F2") + " C = " + tc.ToString("F2") + " F");
+                    Console.WriteLine("Absolute value: " + Math.Abs(tc).ToString("F2"));
                     break;
+
+                case "F":
+                    double tf = (t - 32)/1.8;
+                    Console.WriteLine(t.ToString("F2") + " F = " + tf.ToString("F2") + " C");
+                    Console.WriteLine("Absolute value: " + Math.Abs(tf).ToString("F2"));
+                    break;
+
                 default:
-                Console.WriteLine("Invalid unit");
+                    Console.WriteLine("Invalid unit.");
                     break;
             }
         }
